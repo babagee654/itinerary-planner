@@ -1,21 +1,28 @@
 // app.js
-
 const express = require('express');
 const app = express();
-const port = 3000;
-
+const mongoose = require('mongoose');
+const uri = "mongodb+srv://admin:admin@cluster0.gaufq.mongodb.net/ItineraryPlanner?retryWrites=true&w=majority";
 // Set EJS as the view engine
 app.set('view engine', 'ejs');
 
 // Serve static files from the 'public' directory
 app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-// Define a simple route
-app.get('/', (req, res) => {
-    // Render the 'index.ejs' view
-    res.render('index', { title: 'Express EJS Project', user: { username: "John Doe" } });
-});
+mongoose.connect(uri)
+    .then(() => console.log('Connected to MongoDB'))
 
+const viewRoutes = require('./routes/viewRoutes');
+const databaseRoutes = require('./routes/databaseRoutes');
+const testRoutes = require('./routes/testRouter');
+
+app.use('/test', testRoutes);
+app.use('/', viewRoutes);
+app.use('/api', databaseRoutes);
+
+const port = 3000;
 // Start the server
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
