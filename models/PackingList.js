@@ -1,9 +1,8 @@
 const mongoose = require('mongoose');
 
 const packingListSchema = new mongoose.Schema({
-    essential: object,
-    secondary: object,
-    optional: object,
+    essential: [String],
+    optional: [String],
     trip: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Trip'
