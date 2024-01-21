@@ -14,7 +14,7 @@ const countryTipSchema = new mongoose.Schema({
     healthTips: [String],
     languageTips: [String],
     emergencyTips: [String],
-    country: String,
+    country: { type: String, required: true },
 
 });
 
