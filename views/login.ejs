@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TrekTip</title>
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Your navigation bar here -->
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Sign In</h1>
+            <form action="/login" method="post">
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-signin">Sign in</button>
+                <p class="signup-link">Don’t have an account? <a href="/register">Register</a></p>
+                <!-- Social Media Buttons Here -->
+            </form>
+        </div>
+    </main>
+</body>
+</html>

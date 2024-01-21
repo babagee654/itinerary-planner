@@ -1,0 +1,41 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+    width: 300px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-signin {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Replace with your brand color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+}
+
+.signup-link {
+    margin-top: 20px;
+}
+
+/* Add other styles for navigation, footer, etc. */

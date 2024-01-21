@@ -1,0 +1,18 @@
+{
+    "name": "itinerary-planner",
+    "version": "1.0.0",
+    "description": "App for hackville 2024",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Hackville 2024 Team",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.9",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3",
+        "mongodb": "^6.3.0",
+        "mongoose": "^8.1.0"
+    }
+}
